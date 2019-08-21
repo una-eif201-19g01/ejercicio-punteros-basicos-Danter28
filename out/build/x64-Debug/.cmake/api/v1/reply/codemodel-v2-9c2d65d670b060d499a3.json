@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PunterosBasico",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PunterosBasico::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PunterosBasico-Debug-7f078cdf0b7333d26d85.json",
+					"name" : "PunterosBasico",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/dante/OneDrive/Documentos/proyectos visual studio/una-eif201-19g01/ejercicio-punteros-basicos-Danter28/out/build/x64-Debug",
+		"source" : "C:/Users/dante/OneDrive/Documentos/proyectos visual studio/una-eif201-19g01/ejercicio-punteros-basicos-Danter28"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -24,14 +24,29 @@ int Punteros::numeroAlCuboValor(int numero) {
     return numero;
 }
 
+double Punteros::numeroRaizCuadradaValor(double numero) {
+	double newNumero = sqrt(numero);
+	return newNumero;
+}
+
 int Punteros::numeroAlCuboPuntero(int *numeroPtr) {
     *numeroPtr = *numeroPtr * *numeroPtr * *numeroPtr;
     return *numeroPtr;
 }
 
+double Punteros::numeroRaizCuadradaPuntero(double *numeroPtr) {
+	*numeroPtr= sqrt(*numeroPtr);
+	return *numeroPtr;
+}
+
 int Punteros::numeroAlCuboReferencia(int& numeroPtr) {
     numeroPtr = numeroPtr * numeroPtr * numeroPtr;
     return numeroPtr;
+}
+
+double Punteros::numeroRaizCuadradaReferencia(double& numeroPtr) {
+	numeroPtr = sqrt(numeroPtr);
+	return numeroPtr;
 }
 
 void Punteros::imprimirDatosPuntero() {
@@ -69,6 +84,21 @@ void Punteros::imprimirCalculoAlCuboReferenciaValor() {
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
 
+void Punteros::imprimirCalculoRaizCuadradaReferenciaValor() {
+	double numero = 0;
+
+	numero = 5;
+
+	std::cout << "\nImprime datos de los punteros que se pasan por Valor ____________________"
+		<< std::endl;
+	std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+	numero = numeroRaizCuadradaValor(numero);
+
+	std::cout << "\n\tEl resulado de la raiz cuadrada de la variable [ numero ] es: " << numero << std::endl;
+
+}
+
 void Punteros::imprimirCalculoAlCuboReferenciaPuntero() {
     int numero = 0;
 
@@ -83,6 +113,21 @@ void Punteros::imprimirCalculoAlCuboReferenciaPuntero() {
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
 }
 
+void Punteros::imprimirCalculoRaizCuadradaReferenciaPuntero() {
+	double numero = 0;
+
+	numero = 5;
+
+	std::cout << "\nImprime datos de los punteros que se pasan por Puntero ____________________"
+		<< std::endl;
+	std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+	numero = numeroRaizCuadradaPuntero(&numero);
+
+	std::cout << "\n\tEl resulado de la raiz cuadrada de la variable [ numero ] es: " << numero << std::endl;
+
+}
+
 void Punteros::imprimirCalculoAlCuboReferenciaReferencia() {
     int numero = 0;
 
@@ -95,4 +140,19 @@ void Punteros::imprimirCalculoAlCuboReferenciaReferencia() {
     numero = numeroAlCuboReferencia(numero);
 
     std::cout << "\n\tEl resulado al cubo de la variable [ numero ] es: " << numero << std::endl;
+}
+
+void Punteros::imprimirCalculoRaizCuadradaReferenciaReferencia() {
+	double numero = 0;
+
+	numero = 5;
+
+	std::cout << "\nImprime datos de los punteros que se pasan por Referencia ____________________"
+		<< std::endl;
+	std::cout << "\tEl valor original de la variable [ numero ] es " << numero;
+
+	numero = numeroRaizCuadradaReferencia(numero);
+
+	std::cout << "\n\tEl resulado de la raiz cuadrada de la variable [ numero ] es: " << numero << std::endl;
+
 }
